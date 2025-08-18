@@ -360,26 +360,23 @@ export default function App() {
     </div>
 
     {/* Text Section */}
-    <div className="mt-6 md:mt-0 md:ml-12 lg:ml-24 md:w-1/2">
-      <span className="text-orange-600 uppercase tracking-wide font-semibold">
-        Our Story
-      </span>
-      <h2 className="text-4xl font-bold mt-2 mb-4 text-gray-900">
-        About Us
-      </h2>
-      <p className="text-lg text-gray-600 mb-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <p className="text-lg text-gray-600 mb-6">
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
-      </p>
-      <a
-        href="#"
-        className="inline-block px-6 py-3 bg-orange-600 text-white font-semibold rounded-xl shadow hover:bg-orange-700 transition"
-      >
-        Learn More
-      </a>
-    </div>
+    <div className="md:w-1/2 mt-5 md:mt-0 md:ml-5 lg:ml-10">
+  <span className="text-gray-500">Our Story</span>
+  <h2 className="text-4xl font-bold mt-2 mb-4">About Us</h2>
+  <p className="text-lg mb-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <p className="text-lg mb-6">
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+  </p>
+  <a
+    href="#"
+    className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition"
+  >
+    Learn More
+  </a>
+</div>
+
 
   </div>
 </section>
