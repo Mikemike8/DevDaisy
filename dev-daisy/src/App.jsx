@@ -348,10 +348,9 @@ export default function App() {
   </div>
 </div>
 
-
 <section className="py-12 bg-white">
-  <div className="container mx-auto px-6 lg:px-12">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+  <div className="container px-6 lg:px-12 flex justify-end">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full md:w-auto">
       
       {/* Image Section */}
       <div className="flex justify-end md:justify-end">
@@ -386,6 +385,7 @@ export default function App() {
     </div>
   </div>
 </section>
+
 
 
 
