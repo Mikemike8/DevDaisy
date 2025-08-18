@@ -38,37 +38,15 @@ export const Navbar = () => {
                     </a>
                     <ul className="invisible absolute z-30 space-y-2 rounded-lg border border-slate-50 bg-white p-4 opacity-0 shadow-xl transition-opacity delay-75 ease-in-out group-hover:visible group-hover:opacity-100 dark:border-slate-800 dark:bg-slate-900">
                       <li>
-                        <a
-                          href="#"
+                        <Link
+                          to="/book"
+                          
                           className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
                         >
-                          Business Line of Credit
-                        </a>
+                          Book
+                        </Link>
                       </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                        >
-                          SBA Loan
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                        >
-                          Revenue Based Financing
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                        >
-                          Invoice Factoring
-                        </a>
-                      </li>
+                
                     </ul>
                   </li>
                   <li className="group relative">
@@ -129,12 +107,12 @@ export const Navbar = () => {
           </li>
           {/* Rest of your <li> items... */}
           <li className="group relative w-full text-right">
-                    <a
-                      href="/"
+                    <Link
+                      to="/"
                       className="mx-4 block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li className="group relative w-full text-right">
                     <a
@@ -149,50 +127,28 @@ export const Navbar = () => {
                           href="#"
                           className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
                         >
-                          Business Line of Credit
+                          <Link to="/services/Pricing">Pricing</Link>
                         </a>
                       </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                        >
-                          SBA Loan
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                        >
-                          Revenue Based Financing
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                        >
-                          Invoice Factoring
-                        </a>
-                      </li>
+                     
                     </ul>
                   </li>
                   <li className="group relative w-full text-right">
-                    <a
-                      href="/about"
+                     <Link
+                      to="/about"
+                     
                       className="mx-4 block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
                     >
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li className="group relative w-full text-right">
-                    <a
-                      href="/contact"
+                      <Link
+                      to="/contact"
                       className="mx-4 block whitespace-nowrap px-2 py-2 text-sm text-slate-900 transition hover:text-slate-900 dark:text-slate-50 dark:hover:text-slate-50"
                     >
                       Contact
-                    </a>
+                    </Link>
                   </li>
         </ul>
       </nav>
