@@ -414,7 +414,7 @@ export default function App() {
                 />
                 <div>
                   <h3 className="text-base/7 font-semibold tracking-tight text-gray-900">{person.name}</h3>
-                  <p className="text-sm/6 font-semibold text-indigo-600">{person.role}</p>
+                  <p className="text-sm/6 font-semibold text-orange-600">{person.role}</p>
                 </div>
               </div>
             </li>
