@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import React from 'react'
 import "../App.css";
+import { useState } from 'react';
 
 export const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <>
         
@@ -89,52 +91,44 @@ export const Navbar = () => {
                   </li>
                 </ul>
               </nav>
-        
-              {/* Mobile Menu Button */}
-              <button
-                className="block text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 sm:hidden"
-                title="Open navigation menu"
-              >
-                <svg
-                  preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 24 24"
-                  width="1.2em"
-                  height="1.2em"
-                >
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  ></path>
-                </svg>
-              </button>
-        
-              {/* Mobile Nav */}
-              <nav className="fixed -right-2/3 top-0 z-20 h-full w-2/3 transform overflow-y-auto bg-white py-4 text-base transition dark:bg-slate-900 sm:hidden">
-                <ul className="flex flex-col space-y-2">
-                  <li className="text-right">
-                    <button className="px-6 py-2 text-slate-400 hover:text-slate-900 dark:hover:text-slate-50">
-                      <svg
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 24 24"
-                        width="1.2em"
-                        height="1.2em"
-                      >
-                        <path
-                          fill="none"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 12h14m-4 4l4-4m-4-4l4 4"
-                        ></path>
-                      </svg>
-                    </button>
-                  </li>
-                  <li className="group relative w-full text-right">
+              {/* Hamburger trigger button (add this to your header) */}
+      <button
+        onClick={() => setIsOpen(true)}
+        className="sm:hidden px-4 py-2 text-slate-400 hover:text-slate-900"
+      >
+        {/* Hamburger icon SVG */}
+        <svg viewBox="0 0 24 24" width="1.2em" height="1.2em">
+          <path fill="none" stroke="currentColor" strokeWidth="2" d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+      </button>
+
+      {/* Your nav, with dynamic class */}
+      <nav
+        className={`fixed top-0 z-20 h-full w-2/3 transform overflow-y-auto bg-white py-4 text-base transition dark:bg-slate-900 sm:hidden ${
+          isOpen ? 'right-0' : '-right-2/3'
+        }`}
+      >
+        <ul className="flex flex-col space-y-2">
+          <li className="text-right">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="px-6 py-2 text-slate-400 hover:text-slate-900 dark:hover:text-slate-50"
+            >
+              {/* Your close icon SVG (consider changing to an 'X' for clarity) */}
+              <svg viewBox="0 0 24 24" width="1.2em" height="1.2em">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M18 6L6 18M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </li>
+          {/* Rest of your <li> items... */}
+          <li className="group relative w-full text-right">
                     <a
                       href="/"
                       className="mx-4 block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
@@ -200,8 +194,8 @@ export const Navbar = () => {
                       Contact
                     </a>
                   </li>
-                </ul>
-              </nav>
+        </ul>
+      </nav>
             </header>
         
 
