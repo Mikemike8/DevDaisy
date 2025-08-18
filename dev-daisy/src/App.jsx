@@ -373,7 +373,7 @@ export default function App() {
     href="#"
     className="inline-block px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition"
   >
-    Learn More
+    Learn More 
   </a>
 </div>
 
