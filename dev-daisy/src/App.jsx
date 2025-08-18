@@ -349,13 +349,12 @@ export default function App() {
 </div>
 
 
-
 <section className="py-12 bg-white">
   <div className="container mx-auto px-6 lg:px-12">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       
       {/* Image Section */}
-      <div className="flex justify-center">
+      <div className="flex justify-end md:justify-end">
         <img
           className="rounded-2xl shadow-lg max-w-md w-full object-cover"
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
@@ -364,7 +363,7 @@ export default function App() {
       </div>
 
       {/* Text Section */}
-      <div className="mt-6 md:mt-0">
+      <div className="mt-6 md:mt-0 md:ml-12 lg:ml-24">
         <span className="text-orange-600 uppercase tracking-wide font-semibold">
           Our Story
         </span>
@@ -387,6 +386,7 @@ export default function App() {
     </div>
   </div>
 </section>
+
 
 
 
