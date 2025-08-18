@@ -254,8 +254,10 @@ export default function App() {
   engineer</span> in every tab</h1>
       <p className="mb-5 text">
       Delegate software development tasks to agents called Droids. Droids take commands and deliver: pull requests, tickets, docs, and more.</p>
-      <button className="btn bg-gradient-to-r from-red-500 to-orange-500 text-white">Get Started</button>
-    </div>
+    <button className="px-4 py-2 rounded-sm border bg-gradient-to-r from-red-500 to-orange-500 text-white">
+  Get Started
+</button>
+</div>
     
 
   </div>
