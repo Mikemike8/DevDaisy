@@ -1,9 +1,17 @@
 import React from 'react'
 import "../App.css";
 import { Link } from "react-router-dom";
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 
 export const Home = () => {
+    const stats = [
+  { id: 1, name: "New users annually", value: "1,200" },
+  { id: 2, name: "Projects", value: "320+ clients" },
+  { id: 3, name: "Revenue", value: "$12 million" },
+];
+
      const people = [
   {
     name: 'Leslie Alexander',
@@ -40,212 +48,7 @@ export const Home = () => {
 
 
     <div>
-
-
-
-  <header className="container mx-auto flex w-full items-center justify-between py-4 px-6">
-      {/* Logo */}
-      <a href="#">
-        <div className="w-full text-center text-lg font-extrabold sm:w-fit sm:text-left">
-          <span className="text-orange-600">Dev</span>
-
-          <span className="dark:text-slate-400">Heart</span>
-        </div>
-      </a>
-
-      {/* Desktop Nav */}
-      <nav className="hidden bg-white text-base dark:bg-slate-900 sm:block">
-        <ul className="flex items-center space-x-2">
-          <li className="group relative">
-            <Link
-              to="/"
-              className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-            >
-              Home
-            </Link>
-          </li>
-          <li className="group relative">
-            <a
-              href="#"
-              className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-            >
-              Services
-            </a>
-            <ul className="invisible absolute z-30 space-y-2 rounded-lg border border-slate-50 bg-white p-4 opacity-0 shadow-xl transition-opacity delay-75 ease-in-out group-hover:visible group-hover:opacity-100 dark:border-slate-800 dark:bg-slate-900">
-              <li>
-                <a
-                  href="#"
-                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                >
-                  Business Line of Credit
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                >
-                  SBA Loan
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                >
-                  Revenue Based Financing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                >
-                  Invoice Factoring
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="group relative">
-            <Link
-              to="/about"
-           
-              className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-            >
-              About
-            </Link>
-          </li>
-          <li className="group relative">
-            <Link
-              to="/contact"
-             
-              className="block whitespace-nowrap px-2 py-2 text-sm text-slate-900 transition hover:text-slate-900 dark:text-slate-50 dark:hover:text-slate-50"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-
-      {/* Mobile Menu Button */}
-      <button
-        className="block text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 sm:hidden"
-        title="Open navigation menu"
-      >
-        <svg
-          preserveAspectRatio="xMidYMid meet"
-          viewBox="0 0 24 24"
-          width="1.2em"
-          height="1.2em"
-        >
-          <path
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          ></path>
-        </svg>
-      </button>
-
-      {/* Mobile Nav */}
-      <nav className="fixed -right-2/3 top-0 z-20 h-full w-2/3 transform overflow-y-auto bg-white py-4 text-base transition dark:bg-slate-900 sm:hidden">
-        <ul className="flex flex-col space-y-2">
-          <li className="text-right">
-            <button className="px-6 py-2 text-slate-400 hover:text-slate-900 dark:hover:text-slate-50">
-              <svg
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-                width="1.2em"
-                height="1.2em"
-              >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M5 12h14m-4 4l4-4m-4-4l4 4"
-                ></path>
-              </svg>
-            </button>
-          </li>
-          <li className="group relative w-full text-right">
-            <a
-              href="/"
-              className="mx-4 block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-            >
-              Home
-            </a>
-          </li>
-          <li className="group relative w-full text-right">
-            <a
-              href="#"
-              className="mx-4 block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-            >
-              Solutions
-            </a>
-            <ul className="h-0 space-y-2 overflow-y-hidden bg-slate-50 px-4 py-0 transition-all delay-75 ease-in-out group-hover:h-full group-hover:py-4 dark:bg-slate-800">
-              <li>
-                <a
-                  href="#"
-                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                >
-                  Business Line of Credit
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                >
-                  SBA Loan
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                >
-                  Revenue Based Financing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-                >
-                  Invoice Factoring
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="group relative w-full text-right">
-            <a
-              href="/about"
-              className="mx-4 block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
-            >
-              About
-            </a>
-          </li>
-          <li className="group relative w-full text-right">
-            <a
-              href="/contact"
-              className="mx-4 block whitespace-nowrap px-2 py-2 text-sm text-slate-900 transition hover:text-slate-900 dark:text-slate-50 dark:hover:text-slate-50"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-
-
-
-
-
+   
 <div
   className="hero min-h-screen"
   style={{
@@ -258,25 +61,29 @@ export const Home = () => {
     <div className="max-w-full">
       <h1 className="mb-5 text-7xl ">An  <span className="bg-gradient-to-r from-red-500 to-orange-500 text-transparent bg-clip-text">
   engineer</span> in every tab</h1>
-      <p className="mb-5 text">
+      <p className="mb-5 text-xl">
       Delegate software development tasks to agents called Droids. Droids take commands and deliver: pull requests, tickets, docs, and more.</p>
     <button className="px-4 py-2 rounded-sm border bg-gradient-to-r from-red-500 to-orange-500 text-white">
   Get Started
 </button>
+ <div className="bg-transparent py-8 sm:py-18">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+          {stats.map((stat) => (
+            <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
+              <dt className="text-base/7 text-white">{stat.name}</dt>
+              <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+                {stat.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
 </div>
     
 
   </div>
-
-  {/* <div className="mx-auto mt-48 py-24 sm:py-32 max-w-7xl px-6 lg:px-8">
-    <h2 className="text-center text-lg/8 font-semibold text-white">Trusted by the world’s most innovative teams</h2>
-    <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-white.svg" alt="Transistor" class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" />
-      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-white.svg" alt="Reform" class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" />
-      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-white.svg" alt="Tuple" class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" />
-      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-white.svg" alt="SavvyCal" class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" />
-      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-white.svg" alt="Statamic" class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" />
-    </div> */}
 </div>
 
 
@@ -294,6 +101,7 @@ export const Home = () => {
     
   </div>
 </div>
+
 
 
 
@@ -420,29 +228,6 @@ export const Home = () => {
     </ul>
   </div>
 </div>
-
-<footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
-  <nav>
-    <h6 className="footer-title">Services</h6>
-    <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
-    <a className="link link-hover">Marketing</a>
-    <a className="link link-hover">Advertisement</a>
-  </nav>
-  <nav>
-    <h6 className="footer-title">Company</h6>
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
-  </nav>
-  <nav>
-    <h6 className="footer-title">Legal</h6>
-    <a className="link link-hover">Terms of use</a>
-    <a className="link link-hover">Privacy policy</a>
-    <a className="link link-hover">Cookie policy</a>
-  </nav>
-</footer>
 
 
     </div>
