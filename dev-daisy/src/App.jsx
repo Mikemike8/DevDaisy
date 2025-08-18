@@ -363,12 +363,13 @@ export default function App() {
     <div className="md:w-1/2 mt-5 md:mt-0 md:ml-5 lg:ml-10">
   <span className="text-orange-600">Our Story</span>
   <h2 className="text-4xl font-bold text-black mt-2 mb-4">About Us</h2>
-  <p className="text-lg text-black mb-4">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  </p>
-  <p className="text-lg text-black mb-6">
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
-  </p>
+<p className="text-black dark:text-black text-lg mb-4">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+<p className="text-black dark:text-black text-lg mb-6">
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+</p>
+
   <a
     href="#"
     className="inline-block px-6 py-3 bg-orange-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 transition"
