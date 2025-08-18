@@ -361,7 +361,7 @@ export default function App() {
 
     {/* Text Section */}
     <div className="md:w-1/2 mt-5 md:mt-0 md:ml-5 lg:ml-10">
-  <span className="text-gray-500">Our Story</span>
+  <span className="text-orange-600">Our Story</span>
   <h2 className="text-4xl font-bold mt-2 mb-4">About Us</h2>
   <p className="text-lg mb-4">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -371,7 +371,7 @@ export default function App() {
   </p>
   <a
     href="#"
-    className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition"
+    className="inline-block px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition"
   >
     Learn More
   </a>
