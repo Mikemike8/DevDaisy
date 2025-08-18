@@ -36,75 +36,210 @@ export default function App() {
 ];
   return (
     <div>
-      <div className="navbar bg-base-400 shadow-sm">
-  <div className="flex-1">
-    <svg
-  width="220"
-  height="60"
-  viewBox="0 0 220 60"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style={{ stopColor: "rgb(239,68,68)", stopOpacity: 1 }} />
-      <stop offset="100%" style={{ stopColor: "rgb(249,115,22)", stopOpacity: 1 }} />
-    </linearGradient>
-
-    {/* Drop shadow filter */}
-    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="2" dy="2" stdDeviation="2" floodColor="rgba(0,0,0,0.5)" />
-    </filter>
-  </defs>
-
-  <g fill="url(#gradient)">
-    {/* Heart with shadow */}
-     <text
-          x="10"
-          y="30"
-          fontFamily="Arial, sans-serif"
-          fontSize="28"
-          fontWeight="bold"
-        >
-          DEV
-        </text>
-    <path
-      d="M10,25.8c-1.3-1.6-3.3-2.6-5.5-2.6c-4.2,0-7.7,3.5-7.7,7.7c0,5.6,6.3,12.7,13.2,19.3c6.9-6.6,13.2-13.7,13.2-19.3c0-4.2-3.5-7.7-7.7-7.7c-2.2,0-4.2,1-5.5,2.6L10,28.7L10,25.8z"
-      transform="scale(0.9) translate(80, -20)"
-      filter="url(#shadow)"
-    />
-  </g>
-</svg>
-
- 
 
 
 
-  </div>
-  <div className="flex gap-2">
-    <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
-    <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img
-            alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+  <header className="container mx-auto flex w-full items-center justify-between py-4 px-6">
+      {/* Logo */}
+      <a href="#">
+        <div className="w-full text-center text-lg font-extrabold sm:w-fit sm:text-left">
+          <span className="text-orange-600">Dev</span>
+
+          <span className="dark:text-slate-400">Heart</span>
         </div>
-      </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+      </a>
+
+      {/* Desktop Nav */}
+      <nav className="hidden bg-white text-base dark:bg-slate-900 sm:block">
+        <ul className="flex items-center space-x-2">
+          <li className="group relative">
+            <a
+              href="/"
+              className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+            >
+              Home
+            </a>
+          </li>
+          <li className="group relative">
+            <a
+              href="#"
+              className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+            >
+              Services
+            </a>
+            <ul className="invisible absolute z-30 space-y-2 rounded-lg border border-slate-50 bg-white p-4 opacity-0 shadow-xl transition-opacity delay-75 ease-in-out group-hover:visible group-hover:opacity-100 dark:border-slate-800 dark:bg-slate-900">
+              <li>
+                <a
+                  href="#"
+                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+                >
+                  Business Line of Credit
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+                >
+                  SBA Loan
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+                >
+                  Revenue Based Financing
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+                >
+                  Invoice Factoring
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li className="group relative">
+            <a
+              href="/about"
+              className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+            >
+              About
+            </a>
+          </li>
+          <li className="group relative">
+            <a
+              href="/contact"
+              className="block whitespace-nowrap px-2 py-2 text-sm text-slate-900 transition hover:text-slate-900 dark:text-slate-50 dark:hover:text-slate-50"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Mobile Menu Button */}
+      <button
+        className="block text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 sm:hidden"
+        title="Open navigation menu"
+      >
+        <svg
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 24 24"
+          width="1.2em"
+          height="1.2em"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+
+      {/* Mobile Nav */}
+      <nav className="fixed -right-2/3 top-0 z-20 h-full w-2/3 transform overflow-y-auto bg-white py-4 text-base transition dark:bg-slate-900 sm:hidden">
+        <ul className="flex flex-col space-y-2">
+          <li className="text-right">
+            <button className="px-6 py-2 text-slate-400 hover:text-slate-900 dark:hover:text-slate-50">
+              <svg
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 24 24"
+                width="1.2em"
+                height="1.2em"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 12h14m-4 4l4-4m-4-4l4 4"
+                ></path>
+              </svg>
+            </button>
+          </li>
+          <li className="group relative w-full text-right">
+            <a
+              href="/"
+              className="mx-4 block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+            >
+              Home
+            </a>
+          </li>
+          <li className="group relative w-full text-right">
+            <a
+              href="#"
+              className="mx-4 block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+            >
+              Solutions
+            </a>
+            <ul className="h-0 space-y-2 overflow-y-hidden bg-slate-50 px-4 py-0 transition-all delay-75 ease-in-out group-hover:h-full group-hover:py-4 dark:bg-slate-800">
+              <li>
+                <a
+                  href="#"
+                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+                >
+                  Business Line of Credit
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+                >
+                  SBA Loan
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+                >
+                  Revenue Based Financing
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+                >
+                  Invoice Factoring
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li className="group relative w-full text-right">
+            <a
+              href="/about"
+              className="mx-4 block whitespace-nowrap px-2 py-2 text-sm text-slate-400 transition hover:text-slate-900 dark:hover:text-slate-50"
+            >
+              About
+            </a>
+          </li>
+          <li className="group relative w-full text-right">
+            <a
+              href="/contact"
+              className="mx-4 block whitespace-nowrap px-2 py-2 text-sm text-slate-900 transition hover:text-slate-900 dark:text-slate-50 dark:hover:text-slate-50"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+
+
+
+
 <div
   className="hero min-h-screen"
   style={{
@@ -137,6 +272,9 @@ export default function App() {
       <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-white.svg" alt="Statamic" class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" />
     </div> */}
 </div>
+
+
+
 <div className="bg-white py-6 sm:py-12">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <h2 className="text-center text-lg/8 font-semibold text-gray-900">Trusted by the world’s most innovative teams</h2>
@@ -211,6 +349,47 @@ export default function App() {
     </div>
   </div>
 </div>
+
+
+
+<section className="py-12 bg-white">
+  <div className="container mx-auto px-6 lg:px-12">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      
+      {/* Image Section */}
+      <div className="flex justify-center">
+        <img
+          className="rounded-2xl shadow-lg max-w-md w-full object-cover"
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
+          alt="Team working together"
+        />
+      </div>
+
+      {/* Text Section */}
+      <div className="mt-6 md:mt-0">
+        <span className="text-orange-600 uppercase tracking-wide font-semibold">
+          Our Story
+        </span>
+        <h2 className="text-4xl font-bold mt-2 mb-4 text-gray-900">
+          About Us
+        </h2>
+        <p className="text-lg text-gray-600 mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p className="text-lg text-gray-600 mb-6">
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+        </p>
+        <a
+          href="#"
+          className="inline-block px-6 py-3 bg-orange-600 text-white font-semibold rounded-xl shadow hover:bg-orange-700 transition"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
   <div className="bg-white py-24 sm:py-32">
