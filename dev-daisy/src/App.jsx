@@ -347,44 +347,43 @@ export default function App() {
     </div>
   </div>
 </div>
-
-<section className="py-12 bg-white">
-  <div className="container px-6 lg:px-12 flex justify-end">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full md:w-auto">
-      
-      {/* Image Section */}
-      <div className="flex justify-end md:justify-end">
-        <img
-          className="rounded-2xl shadow-lg max-w-md w-full object-cover"
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
-          alt="Team working together"
-        />
-      </div>
-
-      {/* Text Section */}
-      <div className="mt-6 md:mt-0 md:ml-12 lg:ml-24">
-        <span className="text-orange-600 uppercase tracking-wide font-semibold">
-          Our Story
-        </span>
-        <h2 className="text-4xl font-bold mt-2 mb-4 text-gray-900">
-          About Us
-        </h2>
-        <p className="text-lg text-gray-600 mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <p className="text-lg text-gray-600 mb-6">
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
-        </p>
-        <a
-          href="#"
-          className="inline-block px-6 py-3 bg-orange-600 text-white font-semibold rounded-xl shadow hover:bg-orange-700 transition"
-        >
-          Learn More
-        </a>
-      </div>
+<section className="py-12 bg-white w-full">
+  <div className="flex flex-col md:flex-row items-center w-full px-6 lg:px-12">
+    
+    {/* Image Section */}
+    <div className="flex justify-start md:w-1/2">
+      <img
+        className="rounded-xl shadow-lg w-full object-cover max-w-lg"
+        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
+        alt="Team working together"
+      />
     </div>
+
+    {/* Text Section */}
+    <div className="mt-6 md:mt-0 md:ml-12 lg:ml-24 md:w-1/2">
+      <span className="text-orange-600 uppercase tracking-wide font-semibold">
+        Our Story
+      </span>
+      <h2 className="text-4xl font-bold mt-2 mb-4 text-gray-900">
+        About Us
+      </h2>
+      <p className="text-lg text-gray-600 mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+      </p>
+      <a
+        href="#"
+        className="inline-block px-6 py-3 bg-orange-600 text-white font-semibold rounded-xl shadow hover:bg-orange-700 transition"
+      >
+        Learn More
+      </a>
+    </div>
+
   </div>
 </section>
+
 
 
 
