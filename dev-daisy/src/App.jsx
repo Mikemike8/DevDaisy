@@ -362,7 +362,7 @@ export default function App() {
     {/* Text Section */}
     <div className="md:w-1/2 mt-5 md:mt-0 md:ml-5 lg:ml-10">
   <span className="text-orange-600">Our Story</span>
-  <h2 className="text-4xl font-bold text-black mt-2 mb-4">About Us</h2>
+  <h2 className="text-4xl font-bold text-black dark:text-black mt-2 mb-4">About Us</h2>
 <p className="text-black dark:text-black text-lg mb-4">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </p>
