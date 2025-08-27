@@ -3,7 +3,7 @@ import "../App.css";
 import { Link } from "react-router-dom";
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
-
+import { MacbookScroll } from '../components/ui/macbook-scroll';
 
 export const Home = () => {
     const stats = [
@@ -11,6 +11,13 @@ export const Home = () => {
   { id: 2, name: "Projects", value: "320+ clients" },
   { id: 3, name: "Revenue", value: "$12 million" },
 ];
+
+ const products = [
+  { title: "Moonbeam", link: "https://gomoonbeam.com", thumbnail: "https://aceternity.com/images/products/thumbnails/new/moonbeam.png" },
+  { title: "Cursor", link: "https://cursor.so", thumbnail: "https://aceternity.com/images/products/thumbnails/new/cursor.png" },
+  // ... add remaining products
+];
+
 
      const people = [
   {
@@ -48,43 +55,9 @@ export const Home = () => {
 
 
     <div>
-   
-<div
-  className="hero min-h-screen"
-  style={{
-    backgroundImage:
-      "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
-  }}
->
-  <div className="hero-overlay"></div>
-  <div className="hero-content text-neutral-content text-center">
-    <div className="max-w-full">
-      <h1 className="mb-5 text-7xl ">An  <span className="bg-gradient-to-r from-red-500 to-orange-500 text-transparent bg-clip-text">
-  engineer</span> in every tab</h1>
-      <p className="mb-5 text-xl">
-      Delegate software development tasks to agents called Droids. Droids take commands and deliver: pull requests, tickets, docs, and more.</p>
-    <button className="px-4 py-2 rounded-sm border bg-gradient-to-r from-red-500 to-orange-500 text-white">
-  Get Started
-</button>
- <div className="bg-transparent py-8 sm:py-18">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-          {stats.map((stat) => (
-            <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
-              <dt className="text-base/7 text-white">{stat.name}</dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-                {stat.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-    </div>
-</div>
-    
 
-  </div>
-</div>
+      <MacbookScroll />
+  
 
 
 
