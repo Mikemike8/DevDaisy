@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { MotionValue, motion, useScroll, useTransform ,useMotionValue } from "motion/react";
 import { cn } from "../../lib/utils";
-import myVideo from "../../media/download.mp4";
+
 import {
   IconBrightnessDown,
   IconBrightnessUp,
@@ -191,7 +191,7 @@ export const Lid = ({
 
   <video
     className="absolute inset-0 h-full w-full rounded-lg"
-    src={myVideo}
+    src="/media/Download.mp4"
     playsInline
     controls
     autoPlay
