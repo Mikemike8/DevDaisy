@@ -82,7 +82,7 @@ const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
     translateY: useTransform(textTransform, (y) => y - textOffset),
     opacity: textOpacity,
   }}
-  className="mb-20 -mt-16 w-screen text-center text-orange-600 dark:text-white font-bold leading-snug sm:leading-tight 
+  className="mb-10 -mt-4 w-screen text-center text-orange-600 dark:text-white font-bold leading-snug sm:leading-tight 
              text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
 >
   {title || (
