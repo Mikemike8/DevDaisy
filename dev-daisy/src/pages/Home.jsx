@@ -53,15 +53,15 @@ export const Home = () => {
   return (
 
 
-    <div>
+    <div className='w-full dark:bg-white '>
       
-          <BackgroundBeams className="opacity-70" />
+          <BackgroundBeams className="opacity-70 " />
   <MacbookScroll />
 
 
 
 
-<div className="bg-white py-12 sm:py-6">
+<div className="bg-white  py-12 sm:py-6">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <h2 className="text-center text-lg/8 font-semibold text-orange-600">Trusted by the world’s most innovative teams</h2>
    
