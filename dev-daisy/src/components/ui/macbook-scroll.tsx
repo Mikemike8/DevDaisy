@@ -84,7 +84,7 @@ const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
       opacity: textOpacity ?? 1,           // fallback opacity
     }}
     className="mb-10 text-center text-orange-600 dark:text-orange-600 font-bold leading-snug sm:leading-tight 
-               text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl break-words"
+               text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl break-words"
   >
     <span className="block sm:text-center">
       <span className="block sm:inline">
