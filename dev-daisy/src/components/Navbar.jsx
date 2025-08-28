@@ -82,7 +82,7 @@ export const Navbar = () => {
 
       {/* Your nav, with dynamic class */}
       <nav
-        className={`fixed top-0 z-20 h-full w-2/3 transform overflow-y-auto bg-white py-4 text-base transition dark:bg-white sm:hidden ${
+        className={`fixed top-0 z-20 h-full w-2/3 transform overflow-y-auto bg-white py-4 text-base transition   dark:bg-white sm:hidden ${
           isOpen ? 'right-0' : '-right-2/3'
         }`}
       >
