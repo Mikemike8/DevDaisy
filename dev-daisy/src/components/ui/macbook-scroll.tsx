@@ -56,7 +56,7 @@ useEffect(() => {
 }, []);
 
 // Offset for text
-const textOffset = isMobile ? 150 : isTablet ? 50 : 120; // move text up by 50px on all devices
+const textOffset = isMobile ? 300 : isTablet ? 50 : 120; // move text up by 50px on all devices
 
 // Offset for Macbook image
 const macbookOffset = isMobile ? 1150 : isTablet ? 170 : 400;
