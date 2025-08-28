@@ -2,6 +2,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { MotionValue, motion, useScroll, useTransform ,useMotionValue } from "motion/react";
 import { cn } from "../../lib/utils";
+import myVideo from "../../media/download.mp4";
 import {
   IconBrightnessDown,
   IconBrightnessUp,
@@ -68,6 +69,7 @@ const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
 
 const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
 const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+
 
   return (
 <div
@@ -174,24 +176,31 @@ export const Lid = ({
           </span>
         </div>
       </div>
-      <motion.div
-        style={{
-          scaleX: scaleX,
-          scaleY: scaleY,
-          rotateX: rotate,
-          translateY: translate,
-          transformStyle: "preserve-3d",
-          transformOrigin: "top",
-        }}
-        className="absolute inset-0 h-96 w-[32rem] rounded-2xl bg-[#010101] p-2"
-      >
-        <div className="absolute inset-0 rounded-lg bg-[#272729]" />
-        <img
-          src="https://ui.aceternity.com/linear.webp"
-          alt="aceternity logo"
-          className="absolute inset-0 h-full w-full rounded-lg object-cover object-left-top"
-        />
-      </motion.div>
+ <motion.div
+  style={{
+    scaleX: scaleX,
+    scaleY: scaleY,
+    rotateX: rotate,
+    translateY: translate,
+    transformStyle: "preserve-3d",
+    transformOrigin: "top",
+  }}
+  className="absolute inset-0 h-96 w-[32rem] rounded-2xl bg-[#010101] p-2"
+>
+  <div className="absolute inset-0 rounded-lg bg-[#272729]" />
+
+  <video
+    className="absolute inset-0 h-full w-full rounded-lg"
+    src={myVideo}
+    playsInline
+    controls
+    autoPlay
+    loop
+    muted
+  />
+</motion.div>
+
+
     </div>
   );
 };
