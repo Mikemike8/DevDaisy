@@ -8,7 +8,7 @@ export const Navbar = () => {
     return (
         <>
         
-          <header className="container mx-auto flex w-full items-center justify-between py-4 px-6">
+          <header className="container dark:bg-white-700 mx-auto flex w-full items-center justify-between py-4 px-6">
               {/* Logo */}
               <a href="#">
                 <div className="w-full text-center text-lg font-extrabold sm:w-fit sm:text-left">
