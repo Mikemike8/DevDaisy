@@ -88,7 +88,7 @@ const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   >
     <span className="block sm:text-center">
       <span className="block sm:inline">
-        Build Smarter. Build Faster.
+        Build Smarter. <br /> Build Faster.
       </span>
       <span className="block sm:inline">
         Build with DevHeart.
