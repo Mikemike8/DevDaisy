@@ -23,6 +23,7 @@ import { IconWorld } from "@tabler/icons-react";
 import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
+import { BackgroundBeams } from "./background-beams";
 
 
 export const MacbookScroll = ({
@@ -42,55 +43,74 @@ export const MacbookScroll = ({
     offset: ["start start", "end start"],
   });
 
-  const [isMobile, setIsMobile] = useState(false);
+// inside your component
+const [isMobile, setIsMobile] = useState(false);
+const [isTablet, setIsTablet] = useState(false);
 
-  useEffect(() => {
-    if (window && window.innerWidth < 768) {
-      setIsMobile(true);
-    }
-  }, []);
+useEffect(() => {
+  if (window) {
+    const width = window.innerWidth;
+    setIsMobile(width < 768);
+    setIsTablet(width >= 768 && width < 1024);
+  }
+}, []);
 
-  const scaleX = useTransform(
-    scrollYProgress,
-    [0, 0.3],
-    [1.2, isMobile ? 1 : 1.5],
-  );
-  const scaleY = useTransform(
-    scrollYProgress,
-    [0, 0.3],
-    [0.6, isMobile ? 1 : 1.5],
-  );
- const translate = useTransform(scrollYProgress, [0, 1], [0, 180]); // smaller value
-  const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
-  const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+// Offset for text
+const textOffset = isMobile ? 675 : isTablet ? 50 : 120; // move text up by 50px on all devices
+
+// Offset for Macbook image
+const macbookOffset = isMobile ? 1150 : isTablet ? 170 : 400;
+
+const scaleX = useTransform(scrollYProgress, [0, 0.3], [1.2, isMobile ? 0.9 : 1.5]);
+const scaleY = useTransform(scrollYProgress, [0, 0.3], [0.6, isMobile ? 0.9 : 1.5]);
+const translate = useTransform(scrollYProgress, [0, 1], [0, macbookOffset]);
+const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
+
+const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
+const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   return (
-   <div
+<div
   ref={ref}
-  className="flex min-h-auto shrink-0 scale-[0.35] transform flex-col items-center justify-start pt-24 pb-40 sm:scale-50 md:scale-100 [perspective:800px]"
+  className="flex  min-h-auto shrink-0 scale-[0.35] transform flex-col items-center justify-start  sm:mt-0 pt-2 sm:scale-50 md:scale-55 [perspective:800px]"
 >
-      <motion.h2
-        style={{
-          translateY: textTransform,
-          opacity: textOpacity,
-        }}
-        className="mb-20 text-center text-3xl font-bold text-orange-600 dark:text-white"
-      >
-        {title || (
-          <span>
-            This Macbook is built with Tailwindcss. <br /> No kidding.
-          </span>
-        )}
-      </motion.h2>
-      {/* Lid */}
-      <Lid
-        src={src}
-        scaleX={scaleX}
-        scaleY={scaleY}
-        rotate={rotate}
-        translate={translate}
-      />
+
+
+
+<motion.h2
+  style={{
+    translateY: useTransform(textTransform, (y) => y - textOffset),
+    opacity: textOpacity,
+  }}
+  className="mb-20 -mt-2 w-screen text-center text-orange-600 dark:text-white font-bold leading-snug sm:leading-tight 
+             text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+>
+  {title || (
+    <span className="block text-center">
+      <span className="block sm:inline">
+        Build Smarter. Build Faster.
+      </span>
+      <span className="block sm:inline">
+        Build with DevHeart.
+      </span>
+    </span>
+  )}
+</motion.h2>
+
+
+
+
+
+{/* Lid */}
+<div className="-mt-20"> {/* moves laptop 10px up */}
+  <Lid
+    src={src}
+    scaleX={scaleX}
+    scaleY={scaleY}
+    rotate={rotate}
+    translate={translate} // Macbook moves separately
+  />
+</div>
       {/* Base area */}
       <div className="relative -z-10 h-[22rem] w-[32rem] overflow-hidden rounded-2xl bg-gray-200 dark:bg-[#272729]">
         {/* above keyboard bar */}
@@ -635,21 +655,25 @@ export const OptionKey = ({ className }: { className: string }) => {
 
 const AceternityLogo = () => {
   return (
-    <svg
-      width="66"
-      height="65"
-      viewBox="0 0 66 65"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-3 w-3 text-white"
-    >
-      <path
-        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-        stroke="currentColor"
-        strokeWidth="15"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="round"
-      />
-    </svg>
+   <svg
+  width="120"
+  height="40"
+  viewBox="0 0 120 40"
+  xmlns="http://www.w3.org/2000/svg"
+  className="text-white"
+>
+  <text
+    x="0"
+    y="30"
+    fill="currentColor"
+    fontSize="24"
+    fontWeight="bold"
+    fontFamily="Arial, sans-serif"
+    color="orange"
+  >
+    DevHeart..
+  </text>
+</svg>
+
   );
 };
