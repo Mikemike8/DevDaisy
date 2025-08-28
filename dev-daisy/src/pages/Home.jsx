@@ -2,6 +2,7 @@ import React from 'react'
 import "../App.css";
 import { MacbookScroll } from '../components/ui/macbook-scroll';
 import { BackgroundBeams } from '../components/ui/background-beams';
+import { AnimatedTooltip } from '../components/ui/animated-tooltip';
 
 export const Home = () => {
     const stats = [
@@ -63,6 +64,20 @@ export const Home = () => {
 <div className="bg-white py-12 sm:py-6">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <h2 className="text-center text-lg/8 font-semibold text-orange-600">Trusted by the world’s most innovative teams</h2>
+   
+ <div className="flex flex-row justify-center items-center h-1/2 w-full">
+  <AnimatedTooltip
+    items={people.map((person, i) => ({
+      id: i, // give each a unique id 
+      name: person.name,
+      designation: person.role,
+      image: person.imageUrl,
+    }))}
+  />
+</div>
+
+
+
     <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
       <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" />
       <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" />
