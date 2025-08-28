@@ -193,7 +193,7 @@ export const Lid = ({
     className="absolute inset-0 h-full w-full rounded-lg"
     src="/media/Download.mp4"
     playsInline
-    controls
+  
     autoPlay
     loop
     muted
