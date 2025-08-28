@@ -75,7 +75,7 @@ const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   className="flex  min-h-auto shrink-0 scale-[0.35] transform flex-col items-center justify-start  sm:mt-0 pt-2 sm:scale-50 md:scale-55 [perspective:800px]"
 >
 
-<div className="px-4 sm:px-6 lg:px-8 mt-20">
+<div className="px-4 sm:px-6 lg:px-8 mt-20 pb-20 sm:pb-32 lg:pb-40">
   <motion.h2
     style={{
       translateY: useTransform(textTransform, (y) => y - textOffset),
