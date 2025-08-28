@@ -14,12 +14,12 @@ export const Navbar = () => {
                 <div className="w-full text-center text-lg font-extrabold sm:w-fit sm:text-left">
                   <span className="text-orange-600">Dev</span>
         
-                  <span className="dark:text-slate-400">Heart</span>
+                  <span className="dark:text-orange-700">Heart</span>
                 </div>
               </a>
         
               {/* Desktop Nav */}
-              <nav className="hidden bg-white text-base dark:bg-slate-900 sm:block">
+              <nav className="hidden bg-white text-base dark:bg-white sm:block">
                 <ul className="flex items-center space-x-2">
                   <li className="group relative">
                     <Link
