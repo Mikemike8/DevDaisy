@@ -75,15 +75,13 @@ const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   className="flex  min-h-auto shrink-0 scale-[0.35] transform flex-col items-center justify-start  sm:mt-0 pt-2 sm:scale-50 md:scale-55 [perspective:800px]"
 >
 
-
-
 <motion.h2
   style={{
     translateY: useTransform(textTransform, (y) => y - textOffset),
     opacity: textOpacity,
   }}
-  className="mb-10 -mt-4 w-screen text-center text-orange-600 dark:text-white font-bold leading-snug sm:leading-tight 
-             text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+  className="mb-10 mt-2 max-w-full text-center text-orange-600 dark:!text-white font-bold leading-snug sm:leading-tight 
+             text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl whitespace-normal break-words"
 >
   {title || (
     <span className="block text-center">
