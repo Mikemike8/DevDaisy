@@ -74,26 +74,26 @@ const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   ref={ref}
   className="flex  min-h-auto shrink-0 scale-[0.35] transform flex-col items-center justify-start  sm:mt-0 pt-2 sm:scale-50 md:scale-55 [perspective:800px]"
 >
-
 <div className="px-4 sm:px-6 lg:px-8 mt-20 pb-20 sm:pb-32 lg:pb-40">
   <motion.h2
     style={{
-      translateY: useTransform(textTransform, (y) => y - textOffset),
-      opacity: textOpacity,
+      translateY: useTransform(
+        textTransform ?? useMotionValue(0), // fallback to 0 if undefined
+        (y) => y - (textOffset ?? 0)        // fallback to 0 if undefined
+      ),
+      opacity: textOpacity ?? 1,           // fallback opacity
     }}
-    className="mb-10 text-center text-orange-600 dark:text-white font-bold leading-snug sm:leading-tight 
+    className="mb-10 text-center text-orange-600 dark:text-orange-600 font-bold leading-snug sm:leading-tight 
                text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl break-words"
   >
-    {title || (
-      <span className="block text-center">
-        <span className="block sm:inline">
-          Build Smarter. Build Faster.
-        </span>
-        <span className="block sm:inline">
-          Build with DevHeart.
-        </span>
+    <span className="block sm:text-center">
+      <span className="block sm:inline">
+        Build Smarter. Build Faster.
       </span>
-    )}
+      <span className="block sm:inline">
+        Build with DevHeart.
+      </span>
+    </span>
   </motion.h2>
 </div>
 
